@@ -1,0 +1,90 @@
+body {
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .container {
+display: block;
+margin: 0 auto;
+text-align: center;
+  }
+  .search-form {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+padding: 30px 30px 30px 300px;
+
+      
+  }
+  
+
+  .col-3 {
+      padding: 0px 0px;
+  }
+  h1 {
+    padding-left: 10px;
+    margin: 0;
+    
+    text-transform: capitalize;
+  }
+  
+  .dayTime {
+    font-size: 20px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    
+  }
+  
+  h2 {
+    padding-left: 30px;
+  }
+  
+  h3 {
+    text-align: center;
+    display: inline;
+    margin: auto;
+    padding-left: 110px;
+    padding-top: 50px;
+    font-size: 100px;
+  }
+  
+  a:hover,
+  a:visited,
+  a:link,
+  a:active {
+    text-decoration: none;
+  }
+  
+  .unit {
+    position: relative;
+    top: -45px;
+  }
+  .container .weatherapp {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    max-width: 700px;
+    padding: 10px;
+  }
+  
+  .mainicon {
+    position: relative;
+    left: 65px;
+    bottom: 20px;
+    font-size: 4em;
+  }
+  
+  .day {
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 15px;
+    margin: 0px 5px;
+    padding: 10px;
+    --bs-gutter-x: 0rem;
+  }
+  
+  .icon {
+    font-size: 4em;
+  }
+  
