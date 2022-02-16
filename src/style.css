@@ -4,8 +4,17 @@ body {
   
   .container {
 display: block;
-margin: 0 auto;
-text-align: center;
+margin: 10px auto;
+
+  }
+
+  .container .weatherapp {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    max-width: 700px;
+    padding: 10px;
   }
   .search-form {
       display: block;
@@ -14,24 +23,22 @@ text-align: center;
   }
   
   .col-3 {
-      padding: 0px 0px;
+      padding: 0px;
   }
   h1 {
-    padding-left: 10px;
-    margin: 0;
-    
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 0px;
     text-transform: capitalize;
   }
   
   .dayTime {
+    margin-left: 30px;
     font-size: 20px;
-    padding-left: 10px;
-    margin-bottom: 10px;
-    
   }
   
   h2 {
-    padding-left: 30px;
+    margin-left:  30px;
   }
   
   h3 {
@@ -54,19 +61,12 @@ text-align: center;
     position: relative;
     top: -45px;
   }
-  .container .weatherapp {
-    display: block;
-    margin: 0 auto;
-    border: 1px solid black;
-    border-radius: 10px;
-    max-width: 700px;
-    padding: 10px;
-  }
+ 
   
   .mainicon {
     position: relative;
-    left: 65px;
-    bottom: 20px;
+    left: 100px;
+    bottom: 30px;
     font-size: 4em;
   }
   
