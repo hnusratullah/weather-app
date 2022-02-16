@@ -25,20 +25,7 @@ if (minutes < 10) {
 let dayTime = document.querySelector(".dayTime");
 dayTime.innerHTML = `${day} ${hour}:${minutes}`;
 
-//Feature #2
 
-function citySearch(event) {
-  event.preventDefault();
-  let city = document.querySelector("#search-City");
-  let h1 = document.querySelector("h1");
-  h1.innerHTML = `${city.value}`;
-
-let apiKey = "74735326822fd761ab3cae03ca68c8d0";
-let units = "imperial";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${apiKey}&units=${units}`;
-
-axios.get(apiUrl).then(showWeather);
-}
 
 function showWeather(response){
     let city = response.data.name
@@ -80,6 +67,24 @@ function showLocation (position){
 function getCurrentLocation(){
     navigator.geolocation.getCurrentPosition(showLocation);
 }
+
+
+function search(city) {
+let apiKey = "74735326822fd761ab3cae03ca68c8d0";
+let units = "imperial";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+axios.get(apiUrl).then(showWeather);
+}
+
+function citySearch(event) {
+  event.preventDefault();
+  let city = document.querySelector("#search-City");
+  let h1 = document.querySelector("h1");
+  h1.innerHTML = `${city.value}`;
+  search(city.value);
+}
+
+search("New York");
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", citySearch);
