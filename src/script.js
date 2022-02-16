@@ -46,11 +46,11 @@ function showWeather(response){
     cityElement.innerHTML = `${city}`
    
     let temperature = Math.round(response.data.main.temp);
-    let temperatureElement = document.querySelector("h3")
+    let temperatureElement = document.querySelector(".current-temperature");
     temperatureElement.innerHTML = `${temperature}`;
 
     let weatherStatus = (response.data.weather[0].main);
-    let weatherStatusElement = document.querySelector("h2")
+    let weatherStatusElement = document.querySelector(".current-weather")
     weatherStatusElement.innerHTML = `${weatherStatus}`;
 
     let wind = Math.round(response.data.wind.speed);
