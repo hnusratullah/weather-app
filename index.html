@@ -50,59 +50,54 @@
             </div>
           </form>
 
-
         <h1>Houston</h1>
         <div class = "dayTime"> Day Time </div>
         <div class="row">
-          <div class="col-6">
+          <div class="col-4">
             <div class="current-weather">
               Rain</div>
               <div class="weather-icon" id="weather-icon">
-                <img src="" id="icon-source"/>
-
-              </div></div>
-          <div class="col-6">
+                <img src="" id="icon-source" width="120"/>
+              </div>
+            </div>
+          <div class="col-4">
             <div class="current-temperature"></div> <span class="unit">
-             <a href="#" id="celcius-link"><span id="celcius">°C</span></a> |
-             <a href="#" id="farenheit-link" class ="active"><span id="farenheit">°F</span></a> </span>         
-           
-            <div class="row justify-content-center">
-                <div class="col-auto"> Wind: <span id = "wind">  </span></div>
-                <div class="col-auto">Humidity:</i><span id="humidity"></span></div>
+             <a href="#" id="celcius-link"><span id="celcius"> °C</span></a> |
+             <a href="#" id="farenheit-link" class ="active"><span id="farenheit">°F</span></a> </span> 
+             </div>        
+          <div class="col-4">
+              <div class="wind-humidity">
+             <div class="col"> Wind: <span id = "wind"></span></div>
+             <div class="col"> Humidity:<span id="humidity"></span></div>
+            </div>
+          </div>
+              </div>
             </div>
         <div>
      </div>
-    </div>
-    </div>
 
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-2 col-md-offset-1 day">
-          <div class="icon">🌤 </div> 80°<br/>Monday
-        </div>
-        <div class="col-md-2 day">
-          <div class="icon">☀️ </div> 80°<br/>Tuesday
-        </div>
-        <div class="col-md-2 day">
-          <div class="icon">⛅️ </div> 80°<br/> Wednesday
-        </div>
-        <div class="col-md-2 day">
-          <div class="icon">☀️ </div> 80°<br/>Thursday
-        </div>
-        <div class="col-md-2 day">
-          <div class="icon">☀️ </div> 80°<br/> Friday
-        </div>
+    <div class="weather-forecast">
+      <div class="row">
+        <div class="col-2">
+          <div class="weather-forecast-date"> Mon </div>
+          <img src="http://openweathermap.org/img/wn/01n@2x.png" width="80"/>
+          <div class="weather-forecast-temperature">
+            <span class="weather-forecast-temperature-max">80° </span>
+            <span class="weather-forecast-temperature-min"> 18° </span>
+          </div>
+         </div>
       </div>
-    </div>
-    </div>
-    </div>
+    </div> 
+    
+   </div>
+    
     <div class="open-source-code">
       <small>
         <a href="https://github.com/hnusratullah/weather-app" class="githubLink">Open-source code</a> 
         by Hana Nusratullah
        </small> 
     </div>
-   
+</div>
     <script src="src/script.js">
     </script>
   </body>
