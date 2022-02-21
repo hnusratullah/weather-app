@@ -25,7 +25,28 @@ if (minutes < 10) {
 let dayTime = document.querySelector(".dayTime");
 dayTime.innerHTML = `${day} ${hour}:${minutes}`;
 
+function displayForecast(){
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = ` <div class="row">`;
+  let days = ["Thur", "Fri", "Sat", "Sun"];
+  days.forEach(function(day) {
+    forecastHTML = forecastHTML + `
+    <div class="col-2">
+    <div class="weather-forecast-date"> ${day} </div>
+    <img src="http://openweathermap.org/img/wn/01n@2x.png" width="80"/>
+    <div class="weather-forecast-temperature">
+      <span class="weather-forecast-temperature-max">80° </span>
+      <span class="weather-forecast-temperature-min"> 18° </span>
+    </div>
+    </div>
+    `;
+  })
 
+
+
+forecastHTML = forecastHTML + `</div>`;
+forecastElement.innerHTML = forecastHTML;
+}
 
 function showWeather(response){
     let city = response.data.name
@@ -54,6 +75,8 @@ function showWeather(response){
 
     farenheitTemperature = response.data.main.temp;
 }
+
+
 
 function showLocation (position){
     let latitude = position.coords.latitude;
@@ -87,6 +110,7 @@ function citySearch(event) {
 }
 
 search("New York");
+displayForecast();
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", citySearch);
