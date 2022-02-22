@@ -128,8 +128,6 @@ function citySearch(event) {
   search(city.value);
 }
 
-search("New York");
-
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", citySearch);
@@ -138,28 +136,4 @@ form.addEventListener("submit", citySearch);
 let currentLocation = document.querySelector("#current-Location")
 currentLocation.addEventListener("click", getCurrentLocation);
 
-function showFarenheitTemperature(event) {
-  event.preventDefault();
-  celciusLink.classList.remove("active");
-  farenheitlink.classList.add("active");
-  let temperatureElement = document.querySelector(".current-temperature");
-  temperatureElement.innerHTML = Math.round(farenheitTemperature);
-}
-
-function showCelciusTemperature(event) {
-  event.preventDefault();
-  let celciusTemperature = (farenheitTemperature - 32) * 5/9;
-  farenheitlink.classList.remove("active");
-  celciusLink.classList.add("active");
-  let temperatureElement = document.querySelector(".current-temperature");
-  temperatureElement.innerHTML = Math.round(celciusTemperature);
-}
-
-let farenheitlink = document.querySelector("#farenheit-link");
-farenheitlink.addEventListener("click", showFarenheitTemperature);
-
-
-let celciusLink = document.querySelector("#celcius-link");
-celciusLink.addEventListener("click", showCelciusTemperature);
-
-let farenheitTemperature = null;
+search("New York");
