@@ -25,7 +25,8 @@ if (minutes < 10) {
 let dayTime = document.querySelector(".dayTime");
 dayTime.innerHTML = `${day} ${hour}:${minutes}`;
 
-function displayForecast(){
+function displayForecast(response){
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = ` <div class="row">`;
   let days = ["Thur", "Fri", "Sat", "Sun"];
@@ -42,12 +43,17 @@ function displayForecast(){
     `;
   })
 
-
-
 forecastHTML = forecastHTML + `</div>`;
 forecastElement.innerHTML = forecastHTML;
 }
 
+function getForecast(coordinates){
+  console.log(coordinates);
+  let apiKey = "74735326822fd761ab3cae03ca68c8d0";
+  let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+  console.log(apiURL);
+  axios.get(apiURL).then(displayForecast);
+}
 function showWeather(response){
     let city = response.data.name
     let cityElement = document.querySelector("h1")
@@ -74,6 +80,8 @@ function showWeather(response){
     humidityElement.innerHTML = ` ${humidity}%`;
 
     farenheitTemperature = response.data.main.temp;
+
+    getForecast(response.data.coord);
 }
 
 
@@ -110,7 +118,7 @@ function citySearch(event) {
 }
 
 search("New York");
-displayForecast();
+
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", citySearch);
