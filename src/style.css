@@ -1,6 +1,6 @@
 body {
     font-family: "Poppins", sans-serif;
-  }
+    background: radial-gradient(circle at 10% 20%, rgb(226, 240, 254) 0%, rgb(255, 247, 228) 90%);  }
   
   .container {
 display: block;
@@ -17,12 +17,14 @@ margin: 50px auto;
     border-color: lightgray;
     max-width: 620px;
     padding: 10px;
+    background: #FFFFFF;
 
   }
   .search-form {
       display: block;
       margin: 10px;
       text-align: center;
+      padding-right: 10px;
   }
   
   
